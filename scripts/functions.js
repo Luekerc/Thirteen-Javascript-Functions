@@ -9,9 +9,7 @@
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
-
 function checkData(inputString){
-	console.log(inputString);
 	if(inputString===""){
 		document.getElementById("error").innerHTML="Invalid Input";
 	}
@@ -37,35 +35,34 @@ document.getElementById("btn1").onclick = function(){
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
-// function concatenateArrays(a, b) {
-// 	if( a.toString()===""||b.toString()===""){
-// 		$('.error2').html("Invalid Input");
-// 		$('#answer2').html("");
-// 	}
-// 	else{
-// 		$('.error2').html("");
-// 		var finalArray=a.concat(b);
+function concatenateArrays(a, b) {
+	if( a.toString()===""||b.toString()===""){
+		document.getElementById("error2").innerHTML="Invalid Input";
+		document.getElementById("answer2").innerHTML="";	
+	}
+	else{
+		document.getElementById("error2").innerHTML="";
+		var finalArray=a.concat(b);
 		//this console.logs the concatenated arrays
-		// console.log(finalArray);
+		console.log(finalArray);
 		//this turns finalArray into a product that can print the 
 		//commas onto the html.  Otherwise, the inner two
 		// items will be right next to each other
-// 		var bestArray = "[" + finalArray.join(",") + "]";
-// 		return bestArray;
-// 	}
-// }
-// $(".second-btn").click(function(){
-// 	var a = $("#array-a").val();
-	//the .split() takes out the written commas and
-	// turns the input string into an array and
-	//puts honest to goodness array commas in between items
-	// a = a.split(",");
-	// var b = $("#array-b").val();
-	// b = b.split(",");
-	// console.log(b);
-	//this displays an html version of the array
-// 	$('.answer2').html(concatenateArrays(a, b));
-// });
+		var bestArray = "[" + finalArray.join(",") + "]";
+		console.log(bestArray);
+		// return bestArray;
+		document.getElementById("answer2").innerHTML=bestArray;
+	}
+}
+document.getElementById("btn2").onclick = function(){
+    var a = document.getElementById("array-a").value;
+    	a = a.split(",");
+    var b = document.getElementById("array-b").value;
+    	b = b.split(",");
+
+    concatenateArrays(a, b);
+};
+
 /*
  * PROBLEM 3: (easy)
  * Proper nouns always begin with a capital letter, followed by small letters.
@@ -75,32 +72,32 @@ document.getElementById("btn1").onclick = function(){
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
-// function fixProperNoun(noun) {
-	//checks for an input and whether its a number
-	// if (noun===""||!isNaN(noun)){
-	// 	$(".error3").html("Invalid Input");
-	// 	$('.answer3').html('');
-	// }
-	// else{
-	// 	$(".error3").html('');
-		//changes everything to lower case
-		// var Noun = noun.toLowerCase();
-		//grabs the first character
-		// var firstLetter=(Noun.charAt(0));
-		//capitalizes the first character
-		// var upperCase = firstLetter.toUpperCase();
-		//grabs the rest of the noun and ensures its lowercase
-		// var tailNoun = Noun.toLowerCase().substr(1);
-		//concantenates the two back together
-		// var proNoun = upperCase + tailNoun;
-		//makes the final product available
-// 		return proNoun;
-// 	}
-// }
-// $(".third-btn").click(function(){
-// 	var noun = $("#input3").val();
-// 	$('#input3').val(fixProperNoun(noun));
-// });
+function fixProperNoun(noun) {
+	checks for an input and whether its a number
+	if (noun===""||!isNaN(noun)){
+		$(".error3").html("Invalid Input");
+		$('.answer3').html('');
+	}
+	else{
+		$(".error3").html('');
+		// changes everything to lower case
+		var Noun = noun.toLowerCase();
+		// grabs the first character
+		var firstLetter=(Noun.charAt(0));
+		// capitalizes the first character
+		var upperCase = firstLetter.toUpperCase();
+		// grabs the rest of the noun and ensures its lowercase
+		var tailNoun = Noun.toLowerCase().substr(1);
+		// concantenates the two back together
+		var proNoun = upperCase + tailNoun;
+		makes the final product available
+		return proNoun;
+	}
+}
+$(".third-btn").click(function(){
+	var noun = $("#input3").val();
+	$('#input3').val(fixProperNoun(noun));
+});
 /*
  * PROBLEM 4: (easy)
  * Write a function called `sortLetters` that 
