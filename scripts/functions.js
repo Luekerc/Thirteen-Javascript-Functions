@@ -50,7 +50,6 @@ function concatenateArrays(a, b) {
 		// items will be right next to each other
 		var bestArray = "[" + finalArray.join(",") + "]";
 		console.log(bestArray);
-		// return bestArray;
 		document.getElementById("answer2").innerHTML=bestArray;
 	}
 }
@@ -59,7 +58,6 @@ document.getElementById("btn2").onclick = function(){
     	a = a.split(",");
     var b = document.getElementById("array-b").value;
     	b = b.split(",");
-
     concatenateArrays(a, b);
 };
 
@@ -73,13 +71,13 @@ document.getElementById("btn2").onclick = function(){
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function fixProperNoun(noun) {
-	checks for an input and whether its a number
+	// checks for an input and makes sure its not a number
 	if (noun===""||!isNaN(noun)){
-		$(".error3").html("Invalid Input");
-		$('.answer3').html('');
+		document.getElementById("error3").innerHTML="Invalid Input";
+		document.getElementById("answer3").innerHTML="";
 	}
 	else{
-		$(".error3").html('');
+		document.getElementById("error3").innerHTML="";
 		// changes everything to lower case
 		var Noun = noun.toLowerCase();
 		// grabs the first character
@@ -90,14 +88,15 @@ function fixProperNoun(noun) {
 		var tailNoun = Noun.toLowerCase().substr(1);
 		// concantenates the two back together
 		var proNoun = upperCase + tailNoun;
-		makes the final product available
-		return proNoun;
+		// makes the final product available
+		console.log(proNoun);
+		document.getElementById("answer3").innerHTML=proNoun;
 	}
-}
-$(".third-btn").click(function(){
-	var noun = $("#input3").val();
-	$('#input3').val(fixProperNoun(noun));
-});
+};
+document.getElementById("btn3").onclick = function(){
+	var noun = document.getElementById("input3").value;
+	fixProperNoun(noun);
+};
 /*
  * PROBLEM 4: (easy)
  * Write a function called `sortLetters` that 
@@ -107,24 +106,24 @@ $(".third-btn").click(function(){
  * If the input is invalid throw an 'Invalid Input'
  * exception.
  */
-// function sortLetters(inputString) {
-// 	if(inputString===''||!isNaN(inputString)){
-// 		$(".error4").html("Invalid Input");
-// 		$('.answer4').html('');
-// 		}
-// 		else{
-// 			$('.error4').html('');
-			
-	//Source = http://stackoverflow.com/questions/5285995/how-do-you-sort-letters-in-javascript-with-capital-and-lowercase-letters-combin
-// 			var orderedString =(inputString.split('').sort().join(''));
-// 			return orderedString;
-// 		}
-// }
-// $(".fourth-btn").click(function(){
-// 	var inputString = $(".input4").val();
-	//this displays in html 
-// 	$('.input4').val(sortLetters(inputString));
-// });
+function sortLetters(inputString) {
+	if(inputString===''||!isNaN(inputString)){
+		document.getElementById("error4").innerHTML="Invalid Input";
+		document.getElementById("answer4").innerHTML="";
+		}
+		else{
+			document.getElementById("input4").value="";
+			document.getElementById("error4").innerHTML="";
+// Source = http://stackoverflow.com/questions/5285995/how-do-you-sort-letters-in-javascript-with-capital-and-lowercase-letters-combin
+			var orderedString =(inputString.split('').sort().join(''));
+			document.getElementById("answer4").innerHTML=orderedString;
+		}
+};
+document.getElementById("btn4").onclick = function(){
+	var inputString = document.getElementById("input4").value;
+	sortLetters(inputString);
+};
+
 /*
  * PROBLEM 5: (easy)
  * Write a function called `absVal` that return the absolute value of a given 
@@ -132,25 +131,24 @@ $(".third-btn").click(function(){
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
-// function absVal(integer) {
-// 	console.log(typeof(integer));
-// 	if (integer===""||isNaN(integer)){
-// 		$(".error5").html("Invalid Input");
-// 		$('.answer5').html('');
-// 	}else{
-// 		$(".error5").html("");
-//stackoverflow.com/questions/9353929/get-the-absolute-value-of-a-number-in-javascript
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt
-// 		integer = integer*integer;
-// 		integer = Math.sqrt(integer);
-// 		return integer;
-// 	}
-// }
-// $(".fifth-btn").click(function(){
-// 	var integer = $(".input5").val();
-	//this displays in html 
-// 	$('.answer5').html(absVal(integer));
-// });
+function absVal(integer) {
+	console.log(typeof(integer));
+	if (integer===""||isNaN(integer)){
+		document.getElementById("error5").innerHTML="Invalid Input";
+		document.getElementById("answer5").innerHTML="";
+	}else{
+		document.getElementById("error5").innerHTML="";
+// stackoverflow.com/questions/9353929/get-the-absolute-value-of-a-number-in-javascript
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt
+		integer = integer*integer;
+		integer = Math.sqrt(integer);
+		document.getElementById("answer5").innerHTML=integer;
+	}
+}
+document.getElementById("btn5").onclick = function(){
+	var integer = document.getElementById("input5").value;
+	absVal(integer);
+};
 /*
  * PROBLEM 6: (easy)
  * Write a function called `myMin` that takes two integers and returns the
@@ -158,23 +156,22 @@ $(".third-btn").click(function(){
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
-//  function myMin(a, b) {
-// 	if( a===""||b===""||isNaN(a)||isNaN(b)){
-// 		$('.error6').html("Invalid Input");
-// 		$('.answer6').html("");
-// 	}else if(parseInt(a)>parseInt(b)){
-// 		$('.error6').html("");
-// 		return b;
-// 	}else{
-// 		$('.error6').html("");
-// 		return a;
-// 	}
-// };
-// $(".sixth-btn").click(function(){
-// 	var a = $(".input6a").val();
-// 	var b = $(".input6b").val();
-// 	$('.answer6').html(myMin(a, b));
-// });
+ function myMin(a, b) {
+	if( a===""||b===""||isNaN(a)||isNaN(b)){
+		document.getElementById("error6").innerHTML="Invalid Input";
+		document.getElementById("answer6").innerHTML="";
+	}else if(parseInt(a)>parseInt(b)){
+		document.getElementById("error6").innerHTML="";
+		document.getElementById("answer6").innerHTML=b;
+	}else{
+		document.getElementById("answer6").innerHTML=a;
+	}
+};
+document.getElementById("btn6").onclick=function(){
+	var a = document.getElementById("input6a").value;
+	var b = document.getElementById("input6b").value;
+	myMin(a, b);
+};
 
 /*
  * PROBLEM 7: (easy)
