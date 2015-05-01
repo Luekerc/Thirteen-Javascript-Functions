@@ -165,6 +165,7 @@ document.getElementById("btn5").onclick = function(){
 		document.getElementById("error6").innerHTML="";
 		document.getElementById("answer6").innerHTML=b;
 	}else{
+		document.getElementById("error6").innerHTML="";
 		document.getElementById("answer6").innerHTML=a;
 	}
 }
@@ -258,8 +259,8 @@ document.getElementById("btn7").onclick=function(){
 		document.getElementById("error8").innerHTML="Invalid Input";
 		document.getElementById("answer8").innerHTML="";
 	}else if(N>99){
-		document.getElementById("error6").innerHTML="Slow down John Wayne, lets choose a number smaller than 100."+"<br>"+"I don't like to multiply THAT much!";
-		document.getElementById("answer6").innerHTML="";
+		document.getElementById("error8").innerHTML="Slow down John Wayne, lets choose a number smaller than 100."+"<br>"+"I don't like to multiply THAT much!";
+		document.getElementById("answer8").innerHTML="";
 	}
 	else {
 		document.getElementById("error8").innerHTML="";
@@ -304,7 +305,8 @@ function findMaxDiff(array) {
 	var Jimmy=[];
 	var Ymmij=[];
 
-	for (var i=0;i<array.length; i++){
+	for (var i=0; i<array.length; i++){
+		console.log(array[i]);
 		if(array.toString()===""||isNaN(array[i])){
 			document.getElementById("error9").innerHTML="Invalid Input";
 			document.getElementById("answer9").innerHTML="";
