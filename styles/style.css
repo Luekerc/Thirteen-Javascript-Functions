@@ -11,6 +11,10 @@ body{
 	width: 80%;
 	padding: 3em 0.1em 2em 0.1em;
 }
+p{
+	margin: 1em 1em 1em 1em;
+	line-height: 1.15em;
+}
 h3{
 	margin: 1em 0 1em 0;
 	text-align: center;
