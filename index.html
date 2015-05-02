@@ -27,11 +27,11 @@
     <div id="function" class="left">
       <h2 class="problem">Problem #1</h2>
       <div class="description">
-        Write a function that takes a string and checks to make sure that the string has a length of exactly three. Return true if the string length is three or false if it is not three. 
+        This function takes a string (tech talk for a sequence of characters: letters/numbers/spaces/etc...) and checks to make sure that the string has a length of exactly three characters. It returns "true" if the string length is three or "false" if it is not three. 
         <br> <br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        Example: <br>typing "run" will give you "true", but "no" will give you "false"
       </div>
-      <input type="text" id='input1' placeholder ="Write a string with a length of 3">
+      <input type="text" id='input1' placeholder ="Joe">
       <div class="error" id="error"></div>
       <div class="answer" id="answer"></div>
       <button id="btn1" class="btn">Run</button>
@@ -42,12 +42,12 @@
     <div id="function" class="right">
       <h2 class="problem">Problem #2</h2>
       <div class="description">
-         Write a function that, given two arrays of integers a and b, returns an array that is formed by the elements of a followed by the elements of b. 
+         This function takes two sets (aka arrays[]) of integers, "a" and "b", and returns a new array[] joining the elements of array "a" followed by the elements of array "b". 
          <br> <br>
-         If the input is invalid throw an'Invalid Input' exception.
+         Enter any inputs you'd like, but make sure to separate each item with a comma.
       </div>
       Array a
-      <input type="text" id='array-a' placeholder ="Item 1, Item2, Item3, etc..."> 
+      <input type="text" id='array-a' placeholder ="Item1, Item2, Item3, etc..."> 
       <br>
       Array b
       <input type="text" id='array-b' placeholder ="Item 1, Item2, Item3, etc...">
@@ -61,9 +61,7 @@
     <div id="function" class="left">
       <h2 class="problem">Problem #3</h2>
       <div class="description">
-        Proper nouns always begin with a capital letter, followed by small letters. Write a function called `fixProperNoun` that takes a potentially improperly capitalized proper noun and returns the same noun with the proper capitalization. 
-        <br> <br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        Proper nouns always begin with a capital letter followed by lower case letters. This function takes a potentially improperly capitalized proper noun and returns the same noun with the proper capitalization. 
       </div>
       <input type="text" id='input3' placeholder ="Proper noun here">
       <div id="error3" class="error"></div>
@@ -74,9 +72,7 @@
     <div id="function" class="right">
       <h2 class="problem">Problem #4</h2>
       <div class="description">
-        Write a function called `sortLetters` that returns a string that sorts all the letters from a given string in the alphabetical order. 
-        <br> <br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        This function takes a string and returns the letters in alphabetical order by upper and lower case. <br><br>ex. My Home = HMemoy 
       </div>
 
       <input type="text" class='input4' id="input4" placeholder ="Enter a string of letters">
@@ -91,9 +87,7 @@
     <div class="left">
       <h2 class="problem">Problem #5</h2>
       <div class="description">
-       Write a function called `absVal` that returns the absolute value of a given integer. Don't use Math.abs(...) 
-       <br><br>
-       If the input is invalid throw an 'Invalid Input' exception.
+       Here I've written a function from scratch that returns the absolute value of a given integer without the use of the special JavaScript method called Math.abs(...).
       </div>
       <input type="number" class='input5' id="input5" placeholder ="Enter Number"> 
       <div id="error5" class="error"></div>
@@ -105,9 +99,7 @@
     <div class="right">
       <h2 class="problem">Problem #6</h2>
       <div class="description">
-        Write a function called `myMin` that takes two integers and returns the smaller of the two numbers. 
-        <br> <br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        This function returns the smaller of two numbers.<br><br> Enter any two numbers below.
       </div>
       <input type="number" class='input' id="input6a" placeholder ="Enter a number">
       <br>
@@ -124,13 +116,11 @@
     <div id="function" class="left">
       <h2 class="problem">Problem #7</h2>
       <div class="description">
-        Write a function called `getMonth` that maps a given integer to a month.<br>
+        This function maps a given integer to a month.<br><br>
         For example:<br>
-          getMonth(1) == 'January'<br>
-          getMonth(3) == 'March'<br>
-          etc.
+          entering 1 and pressing "Run" will give you "January"
         <br><br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        Enter a number between 1 and 12 inclusive.
       </div>
       <input type="number" class='input' id='input7' placeholder ="1, 2, 3...up to 12">
       <div id="error7" class="error"></div>
@@ -142,9 +132,9 @@
     <div id="function" class="right">
       <h2 class="problem">Problem #8</h2>
       <div class="description">
-        Write a function called `sumSquares` that returns the sum of squares of all integers from 1 up to and including a given positive, non-zero integer N. 
+        Here, a function returns the sum of squares of all integers from 1 up to and including a given positive, non-zero integer N. 
         <br><br>
-        If the input is invalid throw an 'Invalid Input' exception
+        Enter your number here.
       </div>
 
       <input type="number" class='input' id="input8" placeholder ="Positive integer">
@@ -158,9 +148,9 @@
     <div id="function" class="left">
       <h2 class="problem">Problem #9</h2>
       <div class="description">
-        Given an array of integers, write a function called `findMaxDiff` that finds the maximal difference between any two adjacent elements. 
+        This function finds the max difference between any two adjacent numbers. 
         <br><br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        Enter a list of numbers and separate them by commas.
       </div>
 
       <input type="text" class='input' id="input9" placeholder ="1, 8, 3, etc..."> 
@@ -173,11 +163,11 @@
     <div id="function" class="right">
       <h2 class="problem">Problem #10</h2>
       <div class="description">
-        Write a function called `insertDashes` that transforms a given sentence into a new one with dashes between each two consecutive letters. 
+        This function transforms a given sentence into a new one with dashes between each two consecutive characters while it ignores spaces. 
        <br><br>
         For example: <br>insertDashes('abba test') => a-b-b-a t-e-s-t
         <br><br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        Write a short sentence here.
       </div>
 
       <input type="text" class='input' id="input10" placeholder ="Write short sentence">
@@ -190,15 +180,13 @@
     <div id="function" class="left">
       <h2 class="problem">Problem #11</h2>
       <div class="description">
-        Implement a function called `mySubstring` that can output the substring of the given string within specified bounds.
+        This function outputs the substring of a given string within specified bounds without using the JavaScript method String.substring(). <br><br>Please note, when counting in JavaScript, we often start with 0 instead of 1. That is the case here.
         <br><br>
         For example: 
         <br>
-        mySubstring('abcde', 2, 3) === 'cd'
-        (Don't use String.substring in your solution.)
+        'abcde', 2, 3 = 'cd'
         <br><br>
-        If input is invalid throw 'Invalid Input' exception.
-      </div>
+       
 
       <input type="text" class='input' id="input11" placeholder ="Enter a string">
       <br class="br">
@@ -209,18 +197,17 @@
       <div id="answer11" class="answer"></div>
       <button class="btn" id="btn11">Run</button>
     </div>
+  </div>
 <!-- function 12 -->
     <div id="function" class="right">
       <h2 class="problem">Problem #12</h2>
       <div class="description">
-        Write a function called `splitSwap` that swaps two halves of a given array. If the array has an odd number of elements the array should be split in half by rounding down the number of elements divided by two.
+        This one swaps two halves of a given array[]. If the array has an odd number of elements, the array will be split in half by rounding down the number of elements divided by two.
         <br><br>
-        For example: <br>splitSwap([1,2,3,4,5]) === [3,4,5,1,2]
-        <br><br>
-        If input is invalid throw an 'Invalid Input' exception.
+        For example: <br>[1,2,3,4,5] will equal = [3,4,5,1,2]
       </div>
 
-      <input type="text" class='input' id="input12" placeholder ="Enter as Item 1, Item2, Item3, etc...">
+      <input type="text" class='input' id="input12" placeholder ="Item 1, Item2, Item3, etc...">
       <div id="error12" class="error"></div>
       <div id="answer12" class="answer"></div>
       <button class="btn" id="btn12">Run</button>
@@ -230,13 +217,11 @@
     <div id="function13">
       <h2 class="problem">Problem #13</h2>
       <div class="description">
-        For given n and k write a function called `smallMultiples` that returns the count of the number of multiples of k that are not greater than n.
+        For a given n and k, this function returns the count of the number of multiples of k that are not greater than n.
         <br><br>
         For example:
         <br> 
-        smallMultiples(4, 1) === 3 because 1*2, 1*3 and 1*4 are not greater than 4.
-        <br><br>
-        If the input is invalid throw an 'Invalid Input' exception.
+        Entering 4 and 1 will = 3 because 1*2, 1*3 and 1*4 are not greater than 4.
       </div><br>
       Input number "n"
       <input type="number" class='input' id="input13b" placeholder ="n"><br>
