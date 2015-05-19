@@ -392,7 +392,7 @@ document.getElementById("btn10").onclick=function(){
  */
 function mySubstring(string, a, b){
 	if(string===""||a===""||b===""||isNaN(a)||isNaN(b)||
-	a<0||b>string.length){
+	a<0||b>string.length||a>b){
 		document.getElementById("error11").innerHTML="Invalid Input";
 		document.getElementById("answer11").innerHTML="";
 	}
