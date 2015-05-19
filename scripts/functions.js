@@ -460,7 +460,7 @@ document.getElementById("btn12").onclick=function(){
  		document.getElementById("error13").innerHTML="Invalid Input";
 		document.getElementById("answer13").innerHTML="";
  	}else{
- 		document.getElementById("error13").innerHTML="Invalid Input";
+ 		document.getElementById("error13").innerHTML="";
  		// b/c were not counting n*1 as a multiple
  		// we start at var i=2 and go up to number k. 
  		for (var i=2; i<=k;i++){
